@@ -56,6 +56,21 @@ p {
     }
 }
 
-.container {
+.div {
     @extend %backgroundImage;
+}
+
+
+// Each class inherits all the properties of %backgroundImage aside from the actual image,
+// since div extends the placeholder
+.container {
+    background-image: url("https://dummyimage.com/450x250/f00/fff");
+}
+
+.article {
+    background-image: url("https://dummyimage.com/450x250/000/fff");
+}
+
+.post {
+    background-image: url("https://dummyimage.com/450x250/ddd/fff");
 }
