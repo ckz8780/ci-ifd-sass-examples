@@ -104,17 +104,17 @@ body {
     width: $width;
 }
 
-// Lists
+// Lists:
 $colorsList: $blue, $red, $green, $black, $white;
 
-// Maps (like a dictionary of keys/values)
+// Maps (like a dictionary of keys/values):
 $colors: (
     black: #000,
     red: #e84610,
     green: #b4da55
 );
 
-// Loops (for use with above maps/lists)
+// Loops (for use with above maps/lists):
 @each $key, $value in $colors {
     .item-#{$key} {
         background-color: $value; // Will loop through $colors and create classes .item-black, item-red, etc
@@ -126,4 +126,13 @@ $class: h1div;
 
 div.#{$class} {
     background-color: orange;
+}
+
+// For loops can generate dynamic class names and properties:
+$class-name: item;
+
+@for $i from 1 through 4 {
+    .#{$class-name}-#{'6' + $i + px} {
+        width: 60px + $i; // Will create .item-61px, .item-62px etc and give them the respective widths
+    }
 }
