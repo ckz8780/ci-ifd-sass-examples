@@ -1,10 +1,13 @@
 .wrapper {
-    width: 200px;
-    height: 200px;
-    background-color: #e84610;
-    
-    p {
-        font-size: 30px;
-        color: #fff;
+    .main {
+        .container {
+            .article {
+                .post {
+                    p {
+                        color: blue;
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,9 +1,4 @@
-.wrapper {
-  width: 200px;
-  height: 200px;
-  background-color: #e84610; }
-  .wrapper p {
-    font-size: 30px;
-    color: #fff; }
+.wrapper .main .container .article .post p {
+  color: blue; }
 
 /*# sourceMappingURL=main.css.map */
