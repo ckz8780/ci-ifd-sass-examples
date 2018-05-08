@@ -91,6 +91,22 @@ div.h1div {
   width: 200px;
   height: 100px;
   background-color: #e84610;
+  margin-bottom: 20px;
   color: #fff; }
+
+.unicorn {
+  display: table; }
+
+.unicorn p {
+  background-color: pink;
+  height: 300px;
+  color: white;
+  border: 1px solid pink;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle; }
 
 /*# sourceMappingURL=main.css.map */

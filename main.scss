@@ -162,6 +162,7 @@ $random: 5;
     width: $size;
     height: $size / 2;
     background-color: $color;
+    margin-bottom: 20px;
     
     @if $color == #e84610 {
         color: #fff;
@@ -172,4 +173,28 @@ $random: 5;
 
 .btn {
     @include button(#e84610, 200px);
+}
+
+// One more mixin
+@mixin unicornify() {
+    background-color: pink;
+    height: 300px;
+    color: white;
+    @content;
+    font-size: 30px;
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.unicorn {
+    display: table;
+}
+
+.unicorn p {
+    @include unicornify() {
+        border: 1px solid pink; // We can add additional styles to a mixin also
+        border-radius: 100%;
+        text-align: center;
+    }
 }
