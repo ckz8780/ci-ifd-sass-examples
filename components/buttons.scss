@@ -1,3 +1,14 @@
 .btn {
     @include button(#e84610, 200px);
 }
+
+.btn-tablet {
+    margin-top: 20px;
+    @include tablet {
+        font-size: 10px;
+    }
+    @include desktop {
+        font-size: 16px;
+    }
+}
+

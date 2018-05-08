@@ -5,6 +5,15 @@
   margin-bottom: 20px;
   color: #fff; }
 
+.btn-tablet {
+  margin-top: 20px; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .btn-tablet {
+      font-size: 10px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .btn-tablet {
+      font-size: 16px; } }
+
 /*.wrapper {
     .main {
         .container {
