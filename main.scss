@@ -18,7 +18,7 @@
 .main {
     .wrapper & {
         width: 300px;
-        height: 300px;
+        height: auto;
         background-color: yellow;
     }
 }
@@ -73,4 +73,13 @@ p {
 
 .post {
     background-image: url("https://dummyimage.com/450x250/ddd/fff");
+}
+
+//Functions:
+@function pxToEm($value, $base) {
+    @return ($value / $base) + em;
+}
+
+h1 {
+    font-size: pxToEm(32, 16); // returns 2em
 }

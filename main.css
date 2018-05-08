@@ -13,7 +13,7 @@
 }*/
 .wrapper .main {
   width: 300px;
-  height: 300px;
+  height: auto;
   background-color: yellow; }
 
 p {
@@ -45,5 +45,8 @@ p {
 
 .post {
   background-image: url("https://dummyimage.com/450x250/ddd/fff"); }
+
+h1 {
+  font-size: 2em; }
 
 /*# sourceMappingURL=main.css.map */
