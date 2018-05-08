@@ -49,4 +49,12 @@ p {
 h1 {
   font-size: 2em; }
 
+body {
+  background-color: #0997d3; }
+
+.h1div {
+  border: 1px solid #000;
+  height: 500px;
+  width: 300px; }
+
 /*# sourceMappingURL=main.css.map */
