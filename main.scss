@@ -46,7 +46,7 @@ p {
     }
 }*/
 
-//Placeholders can be used for code that is intended for reuse
+// Placeholders can be used for code that is intended for reuse
 %backgroundImage {
     background: {
         image: url("https://dummyimage.com/450x250/f00/fff");
@@ -75,7 +75,7 @@ p {
     background-image: url("https://dummyimage.com/450x250/ddd/fff");
 }
 
-//Functions:
+// Functions:
 @function pxToEm($value, $base) {
     @return ($value / $base) + em;
 }
@@ -84,7 +84,7 @@ h1 {
     font-size: pxToEm(32, 16); // returns 2em
 }
 
-//Variables:
+// Variables:
 $blue: #0997d3;
 $red: #e84610;
 $green: #b4da55;
@@ -102,4 +102,21 @@ body {
     border: 1px solid $black;
     height: $height;
     width: $width;
+}
+
+// Lists
+$colorsList: $blue, $red, $green, $black, $white;
+
+// Maps (like a dictionary of keys/values)
+$colors: (
+    black: #000,
+    red: #e84610,
+    green: #b4da55
+);
+
+// Loops (for use with above maps/lists)
+@each $key, $value in $colors {
+    .item-#{$key} {
+        background-color: $value; // Will loop through $colors and create classes .item-black, item-red, etc
+    }
 }

@@ -57,4 +57,13 @@ body {
   height: 500px;
   width: 300px; }
 
+.item-black {
+  background-color: #000; }
+
+.item-red {
+  background-color: #e84610; }
+
+.item-green {
+  background-color: #b4da55; }
+
 /*# sourceMappingURL=main.css.map */
