@@ -101,12 +101,12 @@ div.h1div {
   background-color: pink;
   height: 300px;
   color: white;
-  border: 1px solid pink;
-  border-radius: 100%;
-  text-align: center;
   font-size: 30px;
   font-weight: bold;
   display: table-cell;
-  vertical-align: middle; }
+  vertical-align: middle;
+  border: 1px solid pink;
+  border-radius: 100%;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

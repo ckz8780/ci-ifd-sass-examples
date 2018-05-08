@@ -180,11 +180,11 @@ $random: 5;
     background-color: pink;
     height: 300px;
     color: white;
-    @content;
     font-size: 30px;
     font-weight: bold;
     display: table-cell;
     vertical-align: middle;
+    @content;
 }
 
 .unicorn {
