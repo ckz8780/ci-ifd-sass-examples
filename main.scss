@@ -149,3 +149,27 @@ $random: 5;
         color: white;
     }
 }
+
+// Conditional styling:
+.controlflow h1 {
+    @if 1 + 1 == 2 {
+        border: 1px solid black;
+    }
+}
+
+// Mixins:
+@mixin button($color, $size) {
+    width: $size;
+    height: $size / 2;
+    background-color: $color;
+    
+    @if $color == #e84610 {
+        color: #fff;
+    } @else {
+        color: #000;
+    }
+}
+
+.btn {
+    @include button(#e84610, 200px);
+}
