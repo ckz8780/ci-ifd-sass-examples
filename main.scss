@@ -136,3 +136,16 @@ $class-name: item;
         width: 60px + $i; // Will create .item-61px, .item-62px etc and give them the respective widths
     }
 }
+
+// If-else directives can change styling based on conditions:
+$random: 5;
+
+.ifelse h1 {
+    @if $random > 5 {
+        color: blue;
+    } @else if $random == 3 {
+        color: purple;
+    } @else {
+        color: white;
+    }
+}
