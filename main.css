@@ -1,4 +1,19 @@
-.wrapper .main .container .article .post p {
-  color: blue; }
+/*.wrapper {
+    .main {
+        .container {
+            .article {
+                .post {
+                    p {
+                        color: blue;
+                    }
+                }
+            }
+        }
+    }
+}*/
+.wrapper .main {
+  width: 300px;
+  height: 300px;
+  background-color: yellow; }
 
 /*# sourceMappingURL=main.css.map */
