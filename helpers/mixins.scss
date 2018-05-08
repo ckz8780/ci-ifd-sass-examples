@@ -1,0 +1,25 @@
+// Mixins:
+@mixin button($color, $size) {
+    width: $size;
+    height: $size / 2;
+    background-color: $color;
+    margin-bottom: 20px;
+    
+    @if $color == #e84610 {
+        color: #fff;
+    } @else {
+        color: #000;
+    }
+}
+
+// One more mixin
+@mixin unicornify() {
+    background-color: pink;
+    height: 300px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: middle;
+    @content;
+}

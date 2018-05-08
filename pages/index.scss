@@ -1,0 +1,160 @@
+// Select deep-nested paragraph by indentation (bad preactice to go too deep!)
+/*.wrapper {
+    .main {
+        .container {
+            .article {
+                .post {
+                    p {
+                        color: blue;
+                    }
+                }
+            }
+        }
+    }
+}*/
+
+
+// Style class "main" by using parent class "wrapper"
+.main {
+    .wrapper & {
+        width: 300px;
+        height: auto;
+        background-color: yellow;
+    }
+}
+
+// Nested properties
+p {
+    font: {
+        family: open-sans;
+        size: 30px;
+        weight: 500;
+    }
+    
+    text: {
+        align: center;
+        transform: uppercase;
+    }
+}
+
+/*.container {
+    background: {
+        image: url("https://dummyimage.com/450x250/f00/fff");
+        size: cover;
+        position: center center;
+        repeat: no-repeat;
+    }
+}*/
+
+// Placeholders can be used for code that is intended for reuse
+%backgroundImage {
+    background: {
+        image: url("https://dummyimage.com/450x250/f00/fff");
+        size: cover;
+        position: center center;
+        repeat: no-repeat;
+    }
+}
+
+.div {
+    @extend %backgroundImage;
+}
+
+
+// Each class inherits all the properties of %backgroundImage aside from the actual image,
+// since div extends the placeholder
+.container {
+    background-image: url("https://dummyimage.com/450x250/f00/fff");
+}
+
+.article {
+    background-image: url("https://dummyimage.com/450x250/000/fff");
+}
+
+.post {
+    background-image: url("https://dummyimage.com/450x250/ddd/fff");
+}
+
+// Functions:
+@function pxToEm($value, $base) {
+    @return ($value / $base) + em;
+}
+
+h1 {
+    font-size: pxToEm(32, 16); // returns 2em
+}
+
+body {
+    background-color: $blue;
+}
+
+.h1div {
+    border: 1px solid $black;
+    height: $height;
+    width: $width;
+}
+
+// Lists:
+$colorsList: $blue, $red, $green, $black, $white;
+
+// Maps (like a dictionary of keys/values):
+$colors: (
+    black: #000,
+    red: #e84610,
+    green: #b4da55
+);
+
+// Loops (for use with above maps/lists):
+@each $key, $value in $colors {
+    .item-#{$key} {
+        background-color: $value; // Will loop through $colors and create classes .item-black, item-red, etc
+    }
+}
+
+// Passing a variable into a CSS class
+$class: h1div;
+
+div.#{$class} {
+    background-color: orange;
+}
+
+// For loops can generate dynamic class names and properties:
+$class-name: item;
+
+@for $i from 1 through 4 {
+    .#{$class-name}-#{'6' + $i + px} {
+        width: 60px + $i; // Will create .item-61px, .item-62px etc and give them the respective widths
+    }
+}
+
+// If-else directives can change styling based on conditions:
+$random: 5;
+
+.ifelse h1 {
+    @if $random > 5 {
+        color: blue;
+    } @else if $random == 3 {
+        color: purple;
+    } @else {
+        color: white;
+    }
+}
+
+// Conditional styling:
+.controlflow h1 {
+    @if 1 + 1 == 2 {
+        border: 1px solid black;
+    }
+}
+
+.unicorn {
+    display: table;
+}
+
+.unicorn p {
+    @include unicornify() {
+        border: 1px solid pink; // We can add additional styles to a mixin also
+        border-radius: 100%;
+        text-align: center;
+    }
+}
